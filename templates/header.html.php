@@ -15,7 +15,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient pb-3 pt-3">
         <div class="container">
             <a class="navbar-brand" href="index.php"><i class="fa-solid fa-dragon mx-1"></i>SQUOTES</a>
-            <div class="collapse navbar-collapse ms-5" id="navbarNav">
+            <div class="navbar-collapse ms-5" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
