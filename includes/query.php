@@ -160,7 +160,7 @@ function deleteAnswer($pdo, $answerId, $user_id){
 
 function getQuestionDetail($pdo,$question_id){
     $stmt = $pdo->prepare('
-        SELECT q.*, u.username, m.module_name, m.module_code
+        SELECT q.*, u.username, m.module_name
         FROM questions q
         LEFT JOIN users u ON q.user_id = u.user_id
         LEFT JOIN modules m ON q.module_id = m.module_id
