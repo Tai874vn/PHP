@@ -26,7 +26,7 @@
                  by 
                 <?= htmlspecialchars($question['username'] ?? 'Unknown') ?>
                 <?php if ($question['module_name']): ?>
-                    in <?= htmlspecialchars($question['module_name']) ?> (<?= htmlspecialchars($question['module_code']) ?>)
+                    in <?= htmlspecialchars($question['module_name']) ?>
                 <?php endif; ?>
                 </h6>
             </div>
