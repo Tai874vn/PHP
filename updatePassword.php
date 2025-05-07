@@ -15,10 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['updatePassword'])) {
     $password = $_POST['new_password'];
     $confirm_password = $_POST['confirm_new_password'];
     $errors = [];
-
-    if (empty($password)|| empty($email) || empty($confirm_password)) {
-        $errors[] = "All fields are required.";
-    }
     if ($password !== $confirm_password) {
         $errors[] = "Passwords do not match.";
     }

@@ -11,12 +11,12 @@ if ($_SESSION['role'] != 'admin') {
         $modules = getAllModules($pdo);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_user'])) {
-    $user_id = $_POST['user_id'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['edit_user'])) {
+    $user_id = $_POST['edit_user'];
     $username = trim($_POST['username']);
     $email = trim($_POST['email']);
     $password = ($_POST['password']);
-    if (empty($username) || empty($password)|| empty($email)) {
+    if (empty($username)|| empty($email)) {
         $error[] = "All fields are required.";
     } else {
         updateUser($pdo, $username, $email, $password, $user_id);

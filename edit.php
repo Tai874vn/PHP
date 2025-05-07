@@ -43,7 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $image = $question['image']; 
 
- 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove_image'])) {
+        $image = null;
+    }
+
+
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $file_tmp = $_FILES['image']['tmp_name'];
         $file_type = $_FILES['image']['type'];

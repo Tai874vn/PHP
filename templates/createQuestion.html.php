@@ -28,7 +28,7 @@
             <option value="">-- Select Module --</option>
             <?php foreach ($modules as $module): ?>
                 <option value="<?= $module['module_id'] ?>" <?= (isset($_POST['module_id']) && $_POST['module_id'] == $module['module_id']) ? 'selected' : '' ?>>
-                    <?= htmlspecialchars($module['module_name']) ?> (<?= htmlspecialchars($module['module_code']) ?>)
+                    <?= htmlspecialchars($module['module_name']) ?>
                 </option>
             <?php endforeach; ?>
         </select>
